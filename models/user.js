@@ -83,6 +83,18 @@ const userSchema = new mongoose.Schema(
         },
       },
     ],
+    sentRequests: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "User", default: [] },
+    ],
+    receivedRequests: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "User", default: [] },
+    ],
+    ignoredRequests: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "User", default: [] },
+    ],
+    connections: [
+      { type: mongoose.Schema.Types.ObjectId, ref: "User", default: [] },
+    ],
   },
   { timestamps: true }
 );
